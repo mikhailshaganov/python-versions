@@ -69,6 +69,7 @@ class UbuntuPythonBuilder : NixPythonBuilder {
             $tkinterInstallString = "sudo apt install -y python-tk tk-dev"
         }
 
+        sudo apt-get update
         Execute-Command -Command $tkinterInstallString
 
         ### Install dependent packages
