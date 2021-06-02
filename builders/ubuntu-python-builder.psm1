@@ -64,12 +64,11 @@ class UbuntuPythonBuilder : NixPythonBuilder {
 
         ### Compile with tkinter support
         if ($this.Version -gt "3.0.0") {
-            $tkinterInstallString = "sudo apt-get install -y --allow-downgrades python3-tk tk-dev"
+            $tkinterInstallString = "sudo -- sh -c 'apt-get update; apt-get install -y --allow-downgrades python3-tk tk-dev'"
         } else {
             $tkinterInstallString = "sudo apt install -y python-tk tk-dev"
         }
 
-        sudo apt-get update
         Execute-Command -Command $tkinterInstallString
 
         ### Install dependent packages
