@@ -8,6 +8,10 @@ jobs:
   - checkout: self
     submodules: true
 
+  - bash: | 
+     brew reinstall sqlite  
+     ln -s /usr/local/opt/sqlite/bin/sqlite3 /usr/local/bin/
+
   - task: PowerShell@2
     displayName: 'Build Python $(VERSION)'
     inputs:
