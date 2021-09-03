@@ -8,9 +8,8 @@ jobs:
   - checkout: self
     submodules: true
 
-  - name: install-sqlite3
-    run: brew install sqlite
-    shell: bash
+  - script: install-sqlite3
+  - bash: brew install sqlite
 
   - task: PowerShell@2
     displayName: 'Build Python $(VERSION)'
