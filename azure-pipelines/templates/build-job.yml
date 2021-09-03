@@ -9,7 +9,7 @@ jobs:
     submodules: true
 
   - bash: | 
-     ln -s /usr/bin/python3 /usr/bin/python
+     sudo ln -s /usr/bin/python3 /usr/bin/python
 
   - task: PowerShell@2
     displayName: 'Build Python $(VERSION)'
