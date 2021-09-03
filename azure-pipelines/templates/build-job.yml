@@ -9,9 +9,7 @@ jobs:
     submodules: true
 
   - bash: | 
-     brew uninstall --ignore-dependencies sqlite
-     brew install sqlite  
-     ln -s /usr/local/opt/sqlite/bin/sqlite3 /usr/local/bin/
+     ln -s /usr/bin/python3 /usr/bin/python
 
   - task: PowerShell@2
     displayName: 'Build Python $(VERSION)'
