@@ -8,7 +8,6 @@ jobs:
   - checkout: self
     submodules: true
 
-  - script: install-sqlite3
   - bash: brew install sqlite
 
   - task: PowerShell@2
