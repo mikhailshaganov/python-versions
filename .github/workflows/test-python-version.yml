@@ -11,6 +11,13 @@ on:
         default: 'x64'
 
 jobs:
+  install-sqlite3:
+    name: install-sqlite3
+    runs-on: macos-latest
+    steps:
+    - name: install-sqlite3
+      run: brew install sqlite
+      shell: bash
   test-python:
     name: Test Python ${{ github.event.inputs.version }} ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
