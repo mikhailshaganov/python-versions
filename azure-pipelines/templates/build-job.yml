@@ -9,7 +9,7 @@ jobs:
     submodules: true
 
   - bash: | 
-     sudo ln -s /usr/bin/python3 /usr/bin/python
+     export PATH=${PATH}:/usr/bin/python3
 
   - task: PowerShell@2
     displayName: 'Build Python $(VERSION)'
